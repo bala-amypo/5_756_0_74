@@ -16,8 +16,9 @@ public class LocationServiceImpl implements LocationService{
     if(location.getLatitude>90){
         throw new IllegalArgumentException()
     }
- }return 
+ }return lrp.save(location);
 }
+@Override
 public List<Location> getAllLocation(){
-
+return lrp.findAll();
 }
