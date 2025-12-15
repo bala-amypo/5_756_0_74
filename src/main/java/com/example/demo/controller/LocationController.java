@@ -10,14 +10,18 @@ import com.example.demo.service.LocationService;
 
 @RestController
 public class LocationController {
+    @Autowired
     LocationService lcs;
-    public LocationController (LocationService lcs){
-        this.lcs=lcs;
-    }
+    // public LocationController (LocationService lcs){
+    //     this.lcs=lcs;
+    // }
     
     @PostMapping("/location")
     public Location addLocation(@RequestBody Location loc){
         return lcs.createLocation(loc);
     }
-    @GetMapping
+    @GetMapping("/locations")
+    public List<Location> getAll(){
+        return lcs.getall
+    }
 }
