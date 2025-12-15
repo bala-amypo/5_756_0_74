@@ -1,5 +1,6 @@
 package com.example.demo.service.impl;
 
+
 import org.hibernate.mapping.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -17,8 +18,9 @@ public class LocationServiceImpl implements LocationService{
         throw new IllegalArgumentException("latitude");
     }return lrp.save(location);
  }
-}
+
 @Override
 public List<Location> getAllLocation(){
 return lrp.findAll();
+}
 }
