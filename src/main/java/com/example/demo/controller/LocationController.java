@@ -22,6 +22,6 @@ public class LocationController {
     }
     @GetMapping("/locations")
     public List<Location> getAll(){
-        return lcs.getall
+        return lcs.getAllLocation();
     }
 }
